@@ -40,7 +40,10 @@ Route::middleware('autenticacao:padrao,visitante,p3,p4')->prefix('/app')->group(
     Route::get('/fornecedor/excluir/{id}', 'FornecedorController@excluir')->name('app.fornecedor.excluir');
 
     // Rotas Produtos
-    Route::resource('/produto', 'ProdutoController');
+    Route::resource('produto', 'ProdutoController');
+    
+    // Rotas Produtos
+    Route::resource('produto_detalhe', 'ProdutoDetalheController');
 });
 
 Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('site.teste');
